@@ -24,7 +24,7 @@ public class BdExercisesTest {
         File file = ResourceUtils.getFile("classpath:application.properties");
         System.getProperties().load(FileUtils.openInputStream(file));
         String url = SystemProperties.get("os.exercises");
-        bdExercises = new BdExercises(url, new Repository());
+        bdExercises = new BdExercises(url, new Repository("target"));
     }
 
     @Test

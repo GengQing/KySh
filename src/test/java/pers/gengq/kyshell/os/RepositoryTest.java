@@ -12,7 +12,7 @@ public class RepositoryTest {
 
     @Test
     public void saveContent() throws Exception {
-        Repository repository = new Repository();
+        Repository repository = new Repository("target");
         repository.saveContent(1, "hello\n world");
 
     }

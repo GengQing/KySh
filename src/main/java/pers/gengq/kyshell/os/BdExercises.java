@@ -82,6 +82,4 @@ public class BdExercises implements Exercises {
     private String getPageId(int pageNumber) {
         return "pageNo-" + pageNumber;
     }
-
-
 }
