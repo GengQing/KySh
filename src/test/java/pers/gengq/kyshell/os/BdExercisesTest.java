@@ -11,34 +11,28 @@ import org.springframework.util.ResourceUtils;
 import java.io.File;
 import java.io.IOException;
 
-import static junit.framework.TestCase.assertNotNull;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
-public class ExercisesTest {
+public class BdExercisesTest {
 
 
-    private Exercises exercises;
+    private BdExercises bdExercises;
 
     @Before
     public void loadProperties() throws IOException {
         File file = ResourceUtils.getFile("classpath:application.properties");
         System.getProperties().load(FileUtils.openInputStream(file));
         String url = SystemProperties.get("os.exercises");
-        exercises = new Exercises(url);
+        bdExercises = new BdExercises(url);
     }
 
     @Test
-    public void getExercises() throws Exception {
-
-        String content = exercises.getExercises();
+    public void getContent() throws Exception {
+        String content = bdExercises.getContent(30);
         assertNotNull(content);
         System.out.println(content);
-
     }
 
-    @Test
-    public void getContent() {
 
-        exercises.getContent();
-    }
 }
