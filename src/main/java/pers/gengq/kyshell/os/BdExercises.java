@@ -76,7 +76,10 @@ public class BdExercises implements Exercises {
         if (!StringUtils.isEmpty(text)) {
             repository.saveContent(pageNumber, text);
         }
+        driver.close();
         return text;
+
+
     }
 
     private String getPageId(int pageNumber) {
