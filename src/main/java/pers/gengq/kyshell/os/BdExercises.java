@@ -2,11 +2,11 @@ package pers.gengq.kyshell.os;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
@@ -14,8 +14,6 @@ import org.springframework.util.StringUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-
-import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
 
 /**
  * Created by gengqing on 8/21/2018
@@ -26,8 +24,13 @@ public class BdExercises implements Exercises {
 
     private String url;
 
-    public BdExercises(@Value("${os.exercises}") String url) {
+    private Repository repository;
+
+    @Autowired
+    public BdExercises(@Value("${os.exercises}") String url, Repository repository) {
         this.url = url;
+        this.repository = repository;
+
         File geckodriver = null;
         try {
             geckodriver = ResourceUtils.getFile("classpath:geckodriver.exe");
@@ -40,6 +43,10 @@ public class BdExercises implements Exercises {
 
     @Override
     public String getContent(int pageNumber) throws Exception {
+        String content = repository.getContent(pageNumber);
+        if (content != null) {
+            return content;
+        }
 
         FirefoxDriver driver = new FirefoxDriver();
         driver.get(url);
@@ -65,6 +72,10 @@ public class BdExercises implements Exercises {
         Thread.sleep(3000);
         WebElement page = driver.findElement(By.id(getPageId(pageNumber)));
         String text = page.getText().trim();
+
+        if (!StringUtils.isEmpty(text)) {
+            repository.saveContent(pageNumber, text);
+        }
         return text;
     }
 
