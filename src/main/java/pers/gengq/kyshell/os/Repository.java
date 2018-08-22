@@ -12,7 +12,7 @@ import java.nio.file.Paths;
  * Created by gengqing on 8/22/2018
  **/
 @Component
-public class Repository implements Exercises {
+public class Repository {
 
     public static final String UTF_8 = "utf8";
 
@@ -22,7 +22,6 @@ public class Repository implements Exercises {
         this.rootDir = rootDir;
     }
 
-    @Override
     public String getContent(int pageNumber) throws Exception {
         Path path = getPath(pageNumber);
         if (Files.exists(path)) {

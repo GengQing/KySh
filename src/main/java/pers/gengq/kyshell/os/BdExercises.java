@@ -33,7 +33,7 @@ public class BdExercises implements Exercises {
 
         File geckodriver = null;
         try {
-            geckodriver = ResourceUtils.getFile("classpath:geckodriver.exe");
+            geckodriver = ResourceUtils.getFile("geckodriver.exe");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
