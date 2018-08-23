@@ -1,12 +1,18 @@
 package pers.gengq.kyshell.repo;
 
+import lombok.val;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by gengqing on 8/22/2018
@@ -50,4 +56,13 @@ public class Repository {
     private Path getOsExercisesPath(int pageNumber) {
         return Paths.get(repoDir, "os", String.valueOf(pageNumber) + ".txt");
     }
+
+    public List<String> findAll() throws IOException {
+        Path path = Paths.get(repoDir, "os");
+        return Files.walk(path).filter(Files::isRegularFile)
+                .map(path1 -> path1.getFileName().toString())
+                .collect(Collectors.toList());
+    }
+
+
 }
