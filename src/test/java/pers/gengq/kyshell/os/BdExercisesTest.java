@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.system.SystemProperties;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.ResourceUtils;
+import pers.gengq.kyshell.repo.Repository;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class BdExercisesTest {
         File file = ResourceUtils.getFile("classpath:application.properties");
         System.getProperties().load(FileUtils.openInputStream(file));
         String url = SystemProperties.get("os.exercises");
-        bdExercises = new BdExercises(url, new Repository("target"));
+        bdExercises = new BdExercises(url, new Repository());
     }
 
     @Test

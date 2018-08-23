@@ -1,8 +1,7 @@
 package pers.gengq.kyshell.os;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import pers.gengq.kyshell.repo.Repository;
 
 public class RepositoryTest {
 
@@ -12,8 +11,8 @@ public class RepositoryTest {
 
     @Test
     public void saveContent() throws Exception {
-        Repository repository = new Repository("target");
-        repository.saveContent(1, "hello\n world");
+        Repository repository = new Repository();
+        repository.saveOsExerciseContent(1, "hello\n world");
 
     }
 }

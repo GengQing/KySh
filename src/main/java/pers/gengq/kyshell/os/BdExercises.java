@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
+import pers.gengq.kyshell.repo.Repository;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -43,12 +45,14 @@ public class BdExercises implements Exercises {
 
     @Override
     public String getContent(int pageNumber) throws Exception {
-        String content = repository.getContent(pageNumber);
+        String content = repository.getOsExercisesContent(pageNumber);
         if (content != null) {
             return content;
         }
 
-        FirefoxDriver driver = new FirefoxDriver();
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setHeadless(true);
+        FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
         driver.get(url);
 
         WebDriverWait webDriverWait = new WebDriverWait(driver, 100);
@@ -74,7 +78,7 @@ public class BdExercises implements Exercises {
         String text = page.getText().trim();
 
         if (!StringUtils.isEmpty(text)) {
-            repository.saveContent(pageNumber, text);
+            repository.saveOsExerciseContent(pageNumber, text);
         }
         driver.close();
         return text;
