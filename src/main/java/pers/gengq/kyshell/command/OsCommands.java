@@ -1,5 +1,6 @@
 package pers.gengq.kyshell.command;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
@@ -21,7 +22,9 @@ public class OsCommands {
     }
 
     @ShellMethod(value = "get exercises of OS", key = "getEx")
-    public String getExercises(@ShellOption(defaultValue = "1") int pageNumber) throws Exception {
-        return exercises.getContent(pageNumber);
+    public String getExercises(@ShellOption(defaultValue = "1") int pageNumber,
+                               @ShellOption(defaultValue = "GB2312") String charset) throws Exception {
+        String content = exercises.getContent(pageNumber);
+        return new String(content.getBytes(), charset);
     }
 }
