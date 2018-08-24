@@ -12,6 +12,7 @@ public class WenkuTest {
         String content = exercises.getPage(5);
         assertNotNull(content);
         System.out.println(content);
+        exercises.close();
     }
 
     @Test
