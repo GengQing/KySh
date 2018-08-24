@@ -36,7 +36,7 @@ public class OsCommands {
         return new String(content.getBytes(), charset);
     }
 
-    @ShellMethod(value = "list all", key = "find-All")
+    @ShellMethod(value = "list all", key = "Find-All")
     public List<String> getAllExercises() throws IOException {
         return repository.findAll();
     }
