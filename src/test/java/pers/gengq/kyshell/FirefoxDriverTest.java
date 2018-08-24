@@ -30,34 +30,72 @@ public class FirefoxDriverTest {
         Properties ps = PropertiesLoaderUtils.loadAllProperties("application.properties");
         String s = ps.getProperty("os.exercises");
         assertNotNull(s);
-        File geckodriver = ResourceUtils.getFile("classpath:geckodriver.exe");
+        File geckodriver = ResourceUtils.getFile("geckodriver.exe");
         System.setProperty("webdriver.gecko.driver", geckodriver.getAbsolutePath());
         FirefoxDriver driver = new FirefoxDriver();
         driver.get(s);
+        try {
+            waitMoreBtn(driver);
 
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 100);
-        webDriverWait.until(new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver d) {
-                try {
-                    WebElement element = d.findElement(By.className("fc2e"));
-                    return true;
-                } catch (NoSuchElementException e) {
-                    return false;
-                }
-            }
-        });
+            clickMoreBtn(driver);
+
+            waitPageFour(driver);
+
+            WebElement pageInput = driver.findElement(By.className("page-input"));
+            pageInput.clear();
+            String pageNumber = "9";
+            pageInput.sendKeys(pageNumber, "\n");
+
+            String pageName = "pageNo-9";
+            new WebDriverWait(driver, 100).until(webDriver -> {
+                        try {
+                            return !StringUtils.isEmpty(webDriver.findElement(By.id(pageName)).getText().trim());
+                        } catch (NoSuchElementException e) {
+                            System.out.println("waiting content----");
+                            return false;
+                        }
+                    }
+            );
+            WebElement page = driver.findElement(By.id(pageName));
+
+            String text = page.getText().trim();
+            assertFalse(StringUtils.isEmpty(text));
+            System.out.println(text);
+        } finally {
+            driver.close();
+        }
+
+
+    }
+
+    private void clickMoreBtn(FirefoxDriver driver) {
         String script = "document.getElementsByClassName(\"moreBtn goBtn\")[0].click();";
         driver.executeScript(script);
-        Thread.sleep(5 * 1000);
-        WebElement pageInput = driver.findElement(By.className("page-input"));
-        assertNotNull(pageInput);
-        pageInput.clear();
-        pageInput.sendKeys("2", "\n");
+    }
 
-        Thread.sleep(3000);
-        WebElement page = driver.findElement(By.id("pageNo-2"));
-        String text = page.getText().trim();
-        assertFalse(StringUtils.isEmpty(text));
-        System.out.println(text);
+    private void waitPageFour(FirefoxDriver driver) {
+        new WebDriverWait(driver, 100).until(webDriver -> {
+            try {
+                WebElement element = webDriver.findElement(By.className("page-input"));
+                String value = element.getAttribute("value");
+                return value.equals("4");
+            } catch (NoSuchElementException e) {
+                System.out.println("waiting Page button-----");
+                return false;
+            }
+        });
+    }
+
+    private void waitMoreBtn(FirefoxDriver driver) {
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 100);
+        webDriverWait.until(webDriver -> {
+            try {
+                webDriver.findElement(By.className("moreBtn"));
+                return true;
+            } catch (NoSuchElementException e) {
+                System.out.println("waiting more button...");
+                return false;
+            }
+        });
     }
 }
