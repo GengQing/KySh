@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.util.StringUtils;
-import pers.gengq.kyshell.brower.FireFox;
+import pers.gengq.kyshell.brower.FireFoxDriverFactory;
 
 /**
  * Created by gengqing on 8/24/2018
@@ -23,7 +23,7 @@ public class Wenku implements OnlineDoc {
     }
 
     private void prepare() {
-        this.driver = FireFox.firefoxDriver();
+        this.driver = FireFoxDriverFactory.create();
         driver.get(url);
         waitMoreBtn();
         clickMoreBtn();
