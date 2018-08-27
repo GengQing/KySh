@@ -12,7 +12,7 @@ public class RepositoryTest {
     @Test
     public void saveContent() throws Exception {
         Repository repository = new Repository();
-        repository.saveOsExerciseContent(1, "hello\n world");
+        repository.saveContent(1, "hello\n world", "os");
 
     }
 }

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
+import pers.gengq.kyshell.brower.FireFoxDriverFactory;
 
 import java.io.File;
 import java.net.URL;
@@ -60,9 +61,11 @@ public class FirefoxDriverTest {
 
             String text = page.getText().trim();
             assertFalse(StringUtils.isEmpty(text));
-            System.out.println(text);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
-            driver.close();
+            driver.quit();
         }
 
 

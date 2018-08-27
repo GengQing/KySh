@@ -38,6 +38,7 @@ public class OsCommands {
 
     @ShellMethod(value = "list all", key = "Find-All")
     public List<String> getAllExercises() throws IOException {
-        return repository.findAll();
+        return repository.findAll("os");
     }
+
 }

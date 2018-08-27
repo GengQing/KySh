@@ -1,5 +1,7 @@
 package pers.gengq.kyshell.document.online;
 
+import org.apache.http.util.Asserts;
+import org.apache.logging.log4j.util.Strings;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -21,13 +23,16 @@ public class Wenku implements OnlineDoc, Closeable {
 
     private RemoteWebDriver driver;
 
-    public Wenku(String url) {
-        this.url = url;
-        prepareWeb();
+    public Wenku() {
+        this.driver = FireFoxDriverFactory.create();
     }
 
-    private void prepareWeb() {
-        this.driver = FireFoxDriverFactory.create();
+    public void open(String url) {
+        Asserts.notNull(url, "url require not null");
+        if (url.equals(this.url)) {
+            return;
+        }
+        this.url = url;
         driver.get(url);
         waitMoreBtn();
         clickMoreBtn();
@@ -111,6 +116,6 @@ public class Wenku implements OnlineDoc, Closeable {
 
     @Override
     public void close() {
-        driver.close();
+        driver = null;
     }
 }

@@ -1,16 +1,13 @@
 package pers.gengq.kyshell.repo;
 
-import lombok.val;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,19 +29,19 @@ public class Repository {
             String userHome = System.getProperty("user.home");
             this.repoDir = userHome + File.separator + "kyshell_repo";
         }
-
     }
 
-    public String getOsExercisesContent(int pageNumber) throws Exception {
-        Path path = getOsExercisesPath(pageNumber);
+
+    public String getContent(int pageNumber, String name) throws Exception {
+        Path path = getPath(pageNumber, name);
         if (Files.exists(path)) {
             return FileUtils.readFileToString(path.toFile(), CHARSET);
         }
         return null;
     }
 
-    public void saveOsExerciseContent(int pageNumber, String content) throws Exception {
-        Path path = getOsExercisesPath(pageNumber);
+    public void saveContent(int pageNumber, String content, String name) throws Exception {
+        Path path = getPath(pageNumber, name);
         if (!Files.exists(path)) {
             Files.createDirectories(path.getParent());
             Files.createFile(path);
@@ -53,12 +50,12 @@ public class Repository {
 
     }
 
-    private Path getOsExercisesPath(int pageNumber) {
-        return Paths.get(repoDir, "os", String.valueOf(pageNumber) + ".txt");
+    private Path getPath(int pageNumber, String name) {
+        return Paths.get(repoDir, name, String.valueOf(pageNumber) + ".txt");
     }
 
-    public List<String> findAll() throws IOException {
-        Path path = Paths.get(repoDir, "os");
+    public List<String> findAll(String name) throws IOException {
+        Path path = Paths.get(repoDir, name);
         return Files.walk(path).filter(Files::isRegularFile)
                 .map(path1 -> path1.getFileName().toString())
                 .collect(Collectors.toList());

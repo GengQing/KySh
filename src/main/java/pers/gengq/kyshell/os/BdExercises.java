@@ -16,8 +16,6 @@ import pers.gengq.kyshell.repo.Repository;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by gengqing on 8/21/2018
@@ -47,7 +45,7 @@ public class BdExercises implements Exercises {
 
     @Override
     public String getContent(int pageNumber) throws Exception {
-        String content = repository.getOsExercisesContent(pageNumber);
+        String content = repository.getContent(pageNumber, "os");
         if (content != null) {
             return content;
         }
@@ -80,7 +78,7 @@ public class BdExercises implements Exercises {
         String text = page.getText().trim();
 
         if (!StringUtils.isEmpty(text)) {
-            repository.saveOsExerciseContent(pageNumber, text);
+            repository.saveContent(pageNumber, text, "os");
         }
         driver.close();
         return text;

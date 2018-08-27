@@ -1,5 +1,6 @@
 package pers.gengq.kyshell.brower;
 
+import lombok.Synchronized;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -8,9 +9,18 @@ import org.openqa.selenium.firefox.FirefoxOptions;
  **/
 public class FireFoxDriverFactory {
 
+    private static FirefoxDriver driver;
+
+    private static Thread closeDriver = new Thread(() -> driver.quit());
+
+    @Synchronized
     public static FirefoxDriver create() {
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.setHeadless(true);
-        return new FirefoxDriver(firefoxOptions);
+        if (driver == null) {
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.setHeadless(true);
+            driver = new FirefoxDriver(firefoxOptions);
+            Runtime.getRuntime().addShutdownHook(closeDriver);
+        }
+        return driver;
     }
 }
