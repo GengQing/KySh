@@ -9,6 +9,9 @@ import org.springframework.shell.standard.ShellOption;
 import pers.gengq.kyshell.document.online.Wenku;
 import pers.gengq.kyshell.repo.Repository;
 
+import java.io.IOException;
+import java.util.List;
+
 /**
  * Created by gengqing on 8/27/2018
  **/
@@ -22,29 +25,27 @@ public class WenkuCommands {
     @Autowired
     private Repository repository;
 
-    private Wenku wenku;
-
-    public Wenku getWenku() {
-        if (wenku == null) {
-            wenku = new Wenku();
-        }
-        return wenku;
-    }
 
     @ShellMethod(value = "get baidu-wenku", key = "Get-Wenku")
-    public String getPage(@ShellOption(value = "Name", help = "the name associate to a url, config in properties") String name,
+    public String getPage(@ShellOption(value = "Name", help = "the name associate to a url in properties") String name,
                           @ShellOption("PageNumber") int pageNumber) throws Exception {
 
         String content = repository.getContent(pageNumber, name);
         if (content != null) {
             return content;
         } else {
-            Wenku wenku = getWenku();
+            Wenku wenku = Wenku.instance();
             wenku.open(getUrl(name));
             content = wenku.getPage(pageNumber);
             repository.saveContent(pageNumber, content, name);
         }
         return content;
+    }
+
+    @ShellMethod(value = "list all", key = "Get-AllPage")
+    public List<String> getAllPageNumbers(@ShellOption(value = "Name", help = "the name associate to a url in properties")
+                                                  String name) throws IOException {
+        return repository.findAll(name);
     }
 
     private String getUrl(String name) {

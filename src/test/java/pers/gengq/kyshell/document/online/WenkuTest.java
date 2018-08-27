@@ -8,7 +8,7 @@ public class WenkuTest {
 
     @Test
     public void getPage() {
-        Wenku wenku = new Wenku();
+        Wenku wenku = Wenku.instance();
         wenku.open("https://wenku.baidu.com/view/719c983ea66e58fafab069dc5022aaea998f41d5.html");
         String content = wenku.getPage(5);
         assertNotNull(content);

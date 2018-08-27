@@ -1,7 +1,9 @@
 package pers.gengq.kyshell.document.online;
 
+import lombok.Synchronized;
 import org.apache.http.util.Asserts;
 import org.apache.logging.log4j.util.Strings;
+import org.apache.regexp.RE;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -23,8 +25,18 @@ public class Wenku implements OnlineDoc, Closeable {
 
     private RemoteWebDriver driver;
 
-    public Wenku() {
+    private Wenku() {
         this.driver = FireFoxDriverFactory.create();
+    }
+
+    private static Wenku WENKU;
+
+    @Synchronized
+    public static Wenku instance() {
+        if (WENKU == null) {
+            WENKU = new Wenku();
+        }
+        return WENKU;
     }
 
     public void open(String url) {
