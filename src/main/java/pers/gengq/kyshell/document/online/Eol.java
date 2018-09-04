@@ -1,16 +1,8 @@
 package pers.gengq.kyshell.document.online;
 
-import lombok.val;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.springframework.util.Assert;
-
-import java.io.IOException;
-import java.net.URL;
-import java.text.MessageFormat;
 
 /**
  * Created by gengqing on 9/4/2018
