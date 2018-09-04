@@ -7,7 +7,7 @@ import org.springframework.util.Assert;
 /**
  * Created by gengqing on 9/4/2018
  **/
-public class Eol implements OnlineDoc {
+public class Eol implements PagingOnlineDoc {
 
     private String url;
 
@@ -38,7 +38,7 @@ public class Eol implements OnlineDoc {
         driver.get(url);
         WebElement webElement = driver.findElementByClassName("article");
         String content = webElement.getText();
-        return content;
+        return EolFormat.format(content);
     }
 
     private void generateUrl(int pageNumber) {

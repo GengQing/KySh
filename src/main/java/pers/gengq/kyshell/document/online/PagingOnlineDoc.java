@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by gengqing on 8/24/2018
  **/
-public interface OnlineDoc extends Document {
+public interface PagingOnlineDoc extends Document {
 
     void open(String url);
 

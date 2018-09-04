@@ -2,8 +2,6 @@ package pers.gengq.kyshell.document.online;
 
 import lombok.Synchronized;
 import org.apache.http.util.Asserts;
-import org.apache.logging.log4j.util.Strings;
-import org.apache.regexp.RE;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -17,7 +15,7 @@ import java.io.Closeable;
 /**
  * Created by gengqing on 8/24/2018
  **/
-public class Wenku implements OnlineDoc, Closeable {
+public class Wenku implements PagingOnlineDoc, Closeable {
 
     private String url;
 
