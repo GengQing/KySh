@@ -39,6 +39,7 @@ public class Wenku implements OnlineDoc, Closeable {
         return WENKU;
     }
 
+    @Override
     public void open(String url) {
         Asserts.notNull(url, "url require not null");
         if (url.equals(this.url)) {

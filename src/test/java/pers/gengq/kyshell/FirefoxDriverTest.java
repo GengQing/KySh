@@ -1,13 +1,15 @@
 package pers.gengq.kyshell;
 
+import com.gargoylesoftware.htmlunit.html.HTMLParser;
+import org.apache.commons.io.IOUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.boot.test.rule.OutputCapture;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
@@ -15,6 +17,8 @@ import pers.gengq.kyshell.brower.FireFoxDriverFactory;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
@@ -33,7 +37,7 @@ public class FirefoxDriverTest {
         assertNotNull(s);
         File geckodriver = ResourceUtils.getFile("geckodriver.exe");
         System.setProperty("webdriver.gecko.driver", geckodriver.getAbsolutePath());
-        FirefoxDriver driver = new FirefoxDriver();
+        FirefoxDriver driver = FireFoxDriverFactory.create();
         driver.get(s);
         try {
             waitMoreBtn(driver);
@@ -58,6 +62,11 @@ public class FirefoxDriverTest {
                     }
             );
             WebElement page = driver.findElement(By.id(pageName));
+
+            System.out.println("----------------");
+            System.out.println("----------------");
+            byte[] bytes = driver.getScreenshotAs(OutputType.BYTES);
+            Files.write(Paths.get("c:\\tmp\\test.png"), bytes);
 
             String text = page.getText().trim();
             assertFalse(StringUtils.isEmpty(text));
