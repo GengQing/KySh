@@ -1,7 +1,13 @@
 package pers.gengq.kyshell.command;
 
+import org.apache.logging.log4j.util.PropertiesUtil;
+import org.springframework.beans.PropertyAccessorUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.core.env.AbstractEnvironment;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.support.PropertiesLoaderSupport;
+import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.shell.standard.ShellCommandGroup;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
@@ -11,9 +17,13 @@ import pers.gengq.kyshell.document.online.PagingOnlineDoc;
 import pers.gengq.kyshell.document.online.Wenku;
 import pers.gengq.kyshell.repo.Repository;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
+import java.util.Set;
 
 /**
  * Created by gengqing on 8/27/2018
@@ -23,7 +33,7 @@ import java.util.List;
 public class PagingDocCmds {
 
     @Autowired
-    private Environment environment;
+    private AbstractEnvironment environment;
 
     @Autowired
     private Repository repository;
@@ -48,12 +58,17 @@ public class PagingDocCmds {
         return repository.findAll(name);
     }
 
-    @ShellMethod(value = "list all local page num", key = "list-doc")
+    @ShellMethod(value = "list doc names", key = "list-doc")
     public List<String> listDoc() throws IOException {
         List<String> docs = new ArrayList<>();
-        System.getProperties().keySet().stream().filter(this::isDocProperty).forEach(o -> docs.add(o.toString()));
+        Properties properties = PropertiesLoaderUtils.loadAllProperties("application.properties");
+        FileInputStream inputStream = new FileInputStream(Paths.get("./application.properties").toFile());
+        properties.load(inputStream);
+        inputStream.close();
+        properties.keySet().stream().filter(this::isDocProperty).forEach(o -> docs.add(o.toString()));
         return docs;
     }
+
 
     private String getUrl(String name) {
         return environment.getProperty(name);
