@@ -12,6 +12,7 @@ import org.springframework.shell.standard.ShellCommandGroup;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
+import pers.gengq.kyshell.document.online.Cnedu;
 import pers.gengq.kyshell.document.online.Eol;
 import pers.gengq.kyshell.document.online.PagingOnlineDoc;
 import pers.gengq.kyshell.document.online.Wenku;
@@ -79,9 +80,15 @@ public class PagingDocCmds {
             return Wenku.instance();
         } else if (isEol(name)) {
             return new Eol();
+        } else if (isCnedu(name)) {
+            return new Cnedu();
         } else {
             throw new RuntimeException("have no this doc");
         }
+    }
+
+    private boolean isCnedu(String name) {
+        return name.startsWith("cnedu");
     }
 
     private boolean isEol(String name) {

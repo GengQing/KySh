@@ -2,12 +2,18 @@ package pers.gengq.kyshell.document.online;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.springframework.util.Assert;
 
 /**
- * Created by gengqing on 9/4/2018
+ * Created by Geng Qing on 9/18/2018
  **/
-public class Eol extends BaseDoc implements PagingOnlineDoc {
+public class Cnedu extends BaseDoc implements PagingOnlineDoc {
+
+
+    @Override
+    public void open(String url) {
+        this.startUrl = url;
+        this.url = url;
+    }
 
     @Override
     public String getUrl() {
@@ -21,19 +27,12 @@ public class Eol extends BaseDoc implements PagingOnlineDoc {
 
     @Override
     public String getPage(int pageNumber) {
-        generateUrl(pageNumber);
         HtmlUnitDriver driver = new HtmlUnitDriver();
         driver.get(url);
-        WebElement webElement = driver.findElementByClassName("article");
+        WebElement webElement = driver.findElementById("fontzoom");
         String content = webElement.getText();
-        return EolFormat.format(content);
-    }
-
-    private void generateUrl(int pageNumber) {
-        if (pageNumber != 1) {
-            String suffix = ".shtml";
-            url = startUrl.replace(suffix, "_" + (pageNumber - 1) + suffix);
-        }
+        driver.close();
+        return content;
     }
 
     @Override

@@ -11,6 +11,7 @@ public interface PagingOnlineDoc extends Document {
 
     void open(String url);
 
+
     String getUrl();
 
     String getTitle();

@@ -7,7 +7,7 @@ import java.util.StringJoiner;
  **/
 public class EolFormat {
 
-    public static final int WIDTH = 120;
+    public static final int WIDTH = 100;
     public static final String LINE_DELIMITER = "\n";
     public static final String WORD_DELIMITER = " ";
 
