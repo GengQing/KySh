@@ -105,6 +105,6 @@ public class PagingDocCmds {
     }
 
     private boolean isDocProperty(String key) {
-        return isEol(key) || isWenku(key);
+        return isEol(key) || isWenku(key) || isCnedu(key);
     }
 }
