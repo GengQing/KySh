@@ -26,6 +26,7 @@ public class Eol extends BaseDoc implements PagingOnlineDoc {
         driver.get(url);
         WebElement webElement = driver.findElementByClassName("article");
         String content = webElement.getText();
+        driver.close();
         return EolFormat.format(content);
     }
 
