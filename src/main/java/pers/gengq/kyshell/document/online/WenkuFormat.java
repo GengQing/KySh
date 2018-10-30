@@ -32,7 +32,7 @@ public class WenkuFormat implements Format {
         if (StringUtils.isNumeric(line)) {
             return true;
         }
-        return line.length() > 3;
+        return line.length() > 4;
     }
 
 }
