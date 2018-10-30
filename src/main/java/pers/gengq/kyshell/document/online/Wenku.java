@@ -108,7 +108,8 @@ public class Wenku implements PagingOnlineDoc, Closeable {
                     }
                 }
         );
-        return driver.findElement(By.id(pageId)).getText();
+        String string = driver.findElement(By.id(pageId)).getText();
+        return WenkuFormat.format(string);
     }
 
 

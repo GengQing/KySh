@@ -7,7 +7,6 @@ import org.springframework.util.ResourceUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -29,7 +28,7 @@ public class EolFormatTest {
     @Test
     public void getLines() throws IOException {
 
-        String[] lines = EolFormat.getLines(getString());
+        String[] lines = Format.getLines(getString());
         for (String s : lines) {
 
             System.out.println(s);

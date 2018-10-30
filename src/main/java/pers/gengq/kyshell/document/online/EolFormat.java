@@ -5,15 +5,11 @@ import java.util.StringJoiner;
 /**
  * Created by gengqing on 9/4/2018
  **/
-public class EolFormat {
-
-    public static final int WIDTH = 100;
-    public static final String LINE_DELIMITER = "\n";
-    public static final String WORD_DELIMITER = " ";
+public abstract class EolFormat implements Format {
 
     public static String format(String content) {
         StringJoiner article = new StringJoiner(LINE_DELIMITER);
-        String[] lines = getLines(content);
+        String[] lines = Format.getLines(content);
         for (String s : lines) {
             String[] words = s.split(WORD_DELIMITER);
             StringJoiner paragraph = new StringJoiner(WORD_DELIMITER);
@@ -31,7 +27,4 @@ public class EolFormat {
         return article.toString();
     }
 
-    public static String[] getLines(String content) {
-        return content.split(LINE_DELIMITER);
-    }
 }
