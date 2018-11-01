@@ -29,6 +29,8 @@ public class Wenku implements PagingOnlineDoc, Closeable {
 
     private static Wenku WENKU;
 
+    private boolean isClickMore;
+
     @Synchronized
     public static Wenku instance() {
         if (WENKU == null) {
@@ -39,16 +41,25 @@ public class Wenku implements PagingOnlineDoc, Closeable {
 
     @Override
     public void open(String url) {
+        isClickMore = false;
         Asserts.notNull(url, "url require not null");
         if (url.equals(this.url)) {
             return;
         }
         this.url = url;
         driver.get(url);
+        try {
+            Thread.sleep(3*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void waitMany() {
         waitMoreBtn();
         clickMoreBtn();
         waitPageFour();
-
     }
 
     private void waitMoreBtn() {
@@ -92,8 +103,15 @@ public class Wenku implements PagingOnlineDoc, Closeable {
         return driver.getTitle();
     }
 
+
     @Override
     public String getPage(int pageNumber) {
+        if (pageNumber > 3) {
+            if (!isClickMore) {
+                waitMany();
+                isClickMore = true;
+            }
+        }
         WebElement pageInput = pageInput();
         pageInput.clear();
         pageInput.sendKeys(String.valueOf(pageNumber), "\n");

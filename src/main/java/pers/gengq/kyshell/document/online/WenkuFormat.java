@@ -17,7 +17,7 @@ public class WenkuFormat implements Format {
         String[] lines = Format.getLines(content);
         for (int i = 0; i < lines.length; i++) {
             String line = lines[i];
-            if (!shouldMerge(line)) { //
+            if (i == lines.length - 1 || !shouldMerge(line)) { //
                 article.add(line);
             } else {
                 int nextLine = i + 1;
@@ -32,7 +32,7 @@ public class WenkuFormat implements Format {
         if (StringUtils.isNumeric(line)) {
             return true;
         }
-        return line.length() > 4;
+        return line.length() < 8;
     }
 
 }
