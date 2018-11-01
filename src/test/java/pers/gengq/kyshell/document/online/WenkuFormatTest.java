@@ -16,7 +16,7 @@ public class WenkuFormatTest {
     public void format() throws IOException {
         String regular = "2018";
         System.out.println(regular.length());
-        assertTrue(WenkuFormat.shouldMerge(regular));
+        assertTrue(WenkuFormat.shouldMerge(regular, ""));
 
         File file = ResourceUtils.getFile("classpath:24.txt");
         StringJoiner joiner = new StringJoiner("\n");

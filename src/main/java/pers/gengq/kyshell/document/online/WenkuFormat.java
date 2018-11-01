@@ -3,6 +3,8 @@ package pers.gengq.kyshell.document.online;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.StringJoiner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Geng Qing on 10/30/2018
@@ -17,7 +19,7 @@ public class WenkuFormat implements Format {
         String[] lines = Format.getLines(content);
         for (int i = 0; i < lines.length; i++) {
             String line = lines[i];
-            if (i == lines.length - 1 || !shouldMerge(line)) { //
+            if (i == lines.length - 1 || !shouldMerge(line, lines[i + 1])) { //
                 article.add(line);
             } else {
                 int nextLine = i + 1;
@@ -28,11 +30,32 @@ public class WenkuFormat implements Format {
         return article.toString();
     }
 
-    public static boolean shouldMerge(String line) {
+    public static boolean shouldMerge(String line, String next) {
         if (StringUtils.isNumeric(line)) {
             return true;
         }
-        return line.length() < 8;
+
+        if (line.length() < 5) {
+            return true;
+        }
+
+        if (isContainChinese(line) && isContainChinese(next) && line.length() < 25) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isContainChinese(String str) {
+        if (str.contains("“") || str.contains("”") || str.contains("。") || str.contains("，")) {
+            return true;
+        }
+        Pattern p = Pattern.compile("[\u4e00-\u9fa5]");
+        Matcher m = p.matcher(str);
+        if (m.find()) {
+            return true;
+        }
+        return false;
     }
 
 }
