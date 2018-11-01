@@ -18,7 +18,7 @@ public class WenkuFormatTest {
         System.out.println(regular.length());
         assertTrue(WenkuFormat.shouldMerge(regular, ""));
 
-        File file = ResourceUtils.getFile("classpath:24.txt");
+        File file = ResourceUtils.getFile("classpath:1.txt");
         StringJoiner joiner = new StringJoiner("\n");
         Files.readAllLines(file.toPath()).forEach(joiner::add);
 

@@ -22,9 +22,20 @@ public class WenkuFormat implements Format {
             if (i == lines.length - 1 || !shouldMerge(line, lines[i + 1])) { //
                 article.add(line);
             } else {
+//                int preLine = i - 1;
+//                if (line.equals("；") || line.equals("“")) {//；“放到上一行
+//                    if (preLine >= 0) {
+//                        String tmp = lines[preLine] + line;
+//                        lines[preLine] = tmp;
+//                        continue;
+//                    }
+//
+//                }
+
                 int nextLine = i + 1;
                 String tmp = line + lines[nextLine]; // 跟下一行合并
                 lines[nextLine] = tmp; // 放入下一行
+
             }
         }
         return article.toString();
@@ -39,7 +50,7 @@ public class WenkuFormat implements Format {
             return true;
         }
 
-        if (isContainChinese(line) && isContainChinese(next) && line.length() < 25) {
+        if (isContainChinese(line) && isContainChinese(next) && line.length() < 9) {
             return true;
         }
 
