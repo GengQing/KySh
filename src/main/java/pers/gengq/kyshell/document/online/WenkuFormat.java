@@ -15,6 +15,9 @@ public class WenkuFormat implements Format {
         String[] lines = Format.getLines(string);
         for (int i = 1; i < lines.length; i++) {
             String line = lines[i];
+            if (line == null) {
+                continue;
+            }
             if (line.length() == 1) { // 只有一个中文字符放入上面
                 boolean isadd = addToFront(lines, i);
                 if (isadd) {
@@ -24,6 +27,11 @@ public class WenkuFormat implements Format {
                 boolean isadd = addToFront(lines, i);
                 if (isadd) {
                     lines[i] = null;
+                }
+            } else if (line.endsWith("，") || line.endsWith("、")) { //，
+                if (i + 1 < lines.length) {
+                    lines[i] = connect(lines, i);
+                    lines[i + 1] = null;
                 }
             }
 
@@ -38,6 +46,13 @@ public class WenkuFormat implements Format {
             }
         }
         return article.toString();
+    }
+
+    private static String connect(String[] lines, int i) {
+        if (lines[i + 1] != null) {
+            return lines[i] + lines[i + 1];
+        }
+        return lines[i];
     }
 
     private static boolean addToFront(String[] lines, int index) {
