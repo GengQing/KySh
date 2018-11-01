@@ -47,7 +47,9 @@ public class WenkuFormat implements Format {
     }
 
     public static boolean isContainChinese(String str) {
-        if (str.contains("“") || str.contains("”") || str.contains("。") || str.contains("，")) {
+        if (str.contains("“") || str.contains("”") || str.contains("。")
+                || str.contains("，") || str.contains("？") || str.contains("；")
+                || str.contains("（") || str.contains("）")) {
             return true;
         }
         Pattern p = Pattern.compile("[\u4e00-\u9fa5]");
