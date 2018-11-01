@@ -49,7 +49,7 @@ public class Wenku implements PagingOnlineDoc, Closeable {
         this.url = url;
         driver.get(url);
         try {
-            Thread.sleep(3*1000);
+            Thread.sleep(3 * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -127,7 +127,7 @@ public class Wenku implements PagingOnlineDoc, Closeable {
                 }
         );
         String string = driver.findElement(By.id(pageId)).getText();
-        return WenkuFormat.format(string);
+        return WenkuFormat.format2(string);
     }
 
 

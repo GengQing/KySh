@@ -11,6 +11,48 @@ import java.util.regex.Pattern;
  **/
 public class WenkuFormat implements Format {
 
+    public static String format2(String string) {
+        String[] lines = Format.getLines(string);
+        for (int i = 1; i < lines.length; i++) {
+            String line = lines[i];
+            if (line.length() == 1) { // 只有一个中文字符放入上面
+                boolean isadd = addToFront(lines, i);
+                if (isadd) {
+                    lines[i] = null;
+                }
+            } else if (line.length() <= 4 && isContainChinese(line)) {
+                boolean isadd = addToFront(lines, i);
+                if (isadd) {
+                    lines[i] = null;
+                }
+            }
+
+
+        }
+
+        StringJoiner article = new StringJoiner(LINE_DELIMITER);
+        for (int i = 1; i < lines.length; i++) {
+            String line = lines[i];
+            if (line != null) {
+                article.add(line);
+            }
+        }
+        return article.toString();
+    }
+
+    private static boolean addToFront(String[] lines, int index) {
+        for (int i = index - 1; i >= 0; i--) {
+            String front = lines[i];
+            if (front != null) {
+                String tmp = lines[i];
+                lines[i] = tmp + lines[index];
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
     public static String format(String content) {
         StringJoiner article = new StringJoiner(LINE_DELIMITER);
