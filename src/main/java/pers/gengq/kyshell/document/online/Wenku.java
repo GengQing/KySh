@@ -29,7 +29,7 @@ public class Wenku implements PagingOnlineDoc, Closeable {
 
     private static Wenku WENKU;
 
-    private boolean isClickMore;
+    private boolean isClickMore = false;
 
     @Synchronized
     public static Wenku instance() {
@@ -41,12 +41,13 @@ public class Wenku implements PagingOnlineDoc, Closeable {
 
     @Override
     public void open(String url) {
-        isClickMore = false;
         Asserts.notNull(url, "url require not null");
         if (url.equals(this.url)) {
             return;
         }
+
         this.url = url;
+        isClickMore = false;
         driver.get(url);
         try {
             Thread.sleep(3 * 1000);
@@ -63,8 +64,8 @@ public class Wenku implements PagingOnlineDoc, Closeable {
     }
 
     private void waitMoreBtn() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 100);
-        webDriverWait.until(webDriver -> {
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+        boolean b = webDriverWait.until(webDriver -> {
             try {
                 webDriver.findElement(By.className("moreBtn"));
                 return true;
