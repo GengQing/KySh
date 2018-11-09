@@ -107,6 +107,11 @@ public class Wenku implements PagingOnlineDoc, Closeable {
 
     @Override
     public String getPage(int pageNumber) {
+        String string = getOriginalText(pageNumber);
+        return WenkuFormat.format2(string);
+    }
+
+    public String getOriginalText(int pageNumber) {
         if (pageNumber > 3) {
             if (!isClickMore) {
                 waitMany();
@@ -127,8 +132,7 @@ public class Wenku implements PagingOnlineDoc, Closeable {
                     }
                 }
         );
-        String string = driver.findElement(By.id(pageId)).getText();
-        return WenkuFormat.format2(string);
+        return driver.findElement(By.id(pageId)).getText();
     }
 
 

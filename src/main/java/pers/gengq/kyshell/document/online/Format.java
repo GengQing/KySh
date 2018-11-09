@@ -11,4 +11,6 @@ public interface Format {
     static String[] getLines(String content) {
         return content.split(LINE_DELIMITER);
     }
+
+    String formatText(String text);
 }

@@ -69,7 +69,7 @@ public class WenkuFormat implements Format {
     }
 
 
-    public static String format(String content) {
+    public static String format3(String content) {
         StringJoiner article = new StringJoiner(LINE_DELIMITER);
 
 
@@ -128,4 +128,8 @@ public class WenkuFormat implements Format {
         return false;
     }
 
+    @Override
+    public String formatText(String text) {
+        return null;
+    }
 }

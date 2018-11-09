@@ -2,20 +2,22 @@ package pers.gengq.kyshell.document.online;
 
 import org.junit.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Collections;
+
 import static org.junit.Assert.*;
 
 public class WenkuTest {
 
     @Test
-    public void getPage() {
+    public void getPage() throws IOException {
         Wenku wenku = Wenku.instance();
-        wenku.open("https://wenku.baidu.com/view/719c983ea66e58fafab069dc5022aaea998f41d5.html");
-        String content = wenku.getPage(5);
-        assertNotNull(content);
-        System.out.println(content);
-        System.out.println(wenku.getTitle());
-        wenku.open("https://wenku.baidu.com/view/ee818a0d31126edb6f1a10cc.html");
-        System.out.println(wenku.getPage(1));
+        wenku.open("https://wenku.baidu.com/view/674f3114f011f18583d049649b6648d7c0c70848.html");
+        String originalText = wenku.getOriginalText(14);
+        System.out.println(originalText);
+        Files.write(Paths.get("wenku.txt"), Collections.singleton(originalText));
 
     }
 
