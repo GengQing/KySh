@@ -2,8 +2,6 @@ package pers.gengq.kyshell.document.format;
 
 import pers.gengq.kyshell.document.online.Format;
 
-import java.util.StringJoiner;
-
 /**
  * Created by Geng Qing on 11/9/2018
  **/
@@ -46,15 +44,10 @@ public class CommaFormat implements Format {
             }
         }
 
-        StringJoiner article = new StringJoiner(LINE_DELIMITER);
-        for (int i = 1; i < lines.length; i++) {
-            String line = lines[i];
-            if (line != null) {
-                article.add(line);
-            }
-        }
-        return article.toString();
+        return Format.join(lines);
     }
+
+
 
     private boolean endWithJoiner(String line) {
         return line.endsWith("，") || line.endsWith("、") || line.endsWith("：");

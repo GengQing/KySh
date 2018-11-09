@@ -1,6 +1,8 @@
 package pers.gengq.kyshell.document.online;
 
 import org.apache.commons.lang3.StringUtils;
+import pers.gengq.kyshell.document.format.CommaFormat;
+import pers.gengq.kyshell.document.format.OneWordFormat;
 
 import java.util.StringJoiner;
 import java.util.regex.Matcher;
@@ -12,6 +14,10 @@ import java.util.regex.Pattern;
 public class WenkuFormat implements Format {
 
     public static String format2(String string) {
+        CommaFormat commaFormat = new CommaFormat();
+        string = commaFormat.formatText(string);
+        OneWordFormat oneWordFormat = new OneWordFormat();
+        string = oneWordFormat.formatText(string);
         String[] lines = Format.getLines(string);
         for (int i = 1; i < lines.length; i++) {
             String line = lines[i];
@@ -27,11 +33,6 @@ public class WenkuFormat implements Format {
                 boolean isadd = addToFront(lines, i);
                 if (isadd) {
                     lines[i] = null;
-                }
-            } else if (line.endsWith("，") || line.endsWith("、")) { //，
-                if (i + 1 < lines.length) {
-                    lines[i] = connect(lines, i);
-                    lines[i + 1] = null;
                 }
             }
 
