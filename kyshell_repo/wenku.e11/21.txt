@@ -1,0 +1,110 @@
+作伴随状语，原意为“依
+靠，依赖”
+，结合语境，在此将其处理为“根据”
+。其后为一个由
+how
+many
+引导的宾语从
+句，从句的谓语动词是
+are
+needed
+。在翻译时，为了更符合中文习惯，可先翻译分词短语，再翻译主句。
+【译文】根据人们得到“正确”答案所需查询次数不同，每在谷歌上搜索一次便会产生
+0.2
+到
+7.0
+克的二氧化碳。
+句
+4
+To deliver results to its users quickly, then, Google has to maintain vast data centres around
+the world, packed
+with powerful computers.
+【考点】不定式短语作目的状语，分词短语作后置定语
+【解析】简单句。句子主干是：
+Google has to maintain
+„。
+To deliver
+„为不定式短语作目
+的状语，该句子可理
+解为“为了快速将搜索结果传递给用户”
+。
+packed
+with
+powerful
+computers
+为过去分词短语
+作后置定语修饰
+data
+centres
+，在翻译处理时可将其前置，直译为“配备有功能强大的计算机系统的数据中心”
+，
+为更符合中文表达习惯，
+可采取状译法，译为“借助功能强大的计算机系统来维护全球各大数据库中心”
+。
+【译文】
+为了快速将搜索结果传递给用户，
+谷歌不得不借助功能强大的计算机系统来维护全
+球各大数据库中心。
+句
+5
+While producing large quantities of CO2, these computers emit a great deal of heat, so the
+centres need to be well
+air-conditioned, which uses even more energy.
+【考点】省略结构，时间状语从句，并列结构，定语从句
+【解析】复合句。句子主干是：
+these computers emit a great deal of heat
+。
+while
+引导时间状
+语从句，表示“在„„
+时候”
+；此外，该状语从句省略了主语和谓语
+these computers are
+。
+So
+是并列连词，表示结
+果，即计算机释放大量热
+量的结果是数据中心需要良好的散热设备。
+which
+引导非限定性定语从句，
+which
+指代
+the
+centres need to be well
+air-conditioned
+这一事实，翻译时，可以采用后置法。
+【译文】
+这些计算机在产生大量二氧化碳的同时，
+还释放出了大量的热量，
+因此数据中心又
+必须装备很好的散
+热设备，这就会消耗更多的能源。
+句
+6
+However, Google and other big tech providers monitor their efficiency closely and make
+improvements.
+【考点】并列结构
+【解析】
+本句含有一个并列结构，
+monitor their efficiency closely
+和
+make improvements
+为
+并列谓语，
+Google and
+other big tech providers
+为其共同的主语。
+tech
+为“
+technology
+”的缩写。
+monitor
+原本是名
+词，有“班长，监控器”的意
+思，在本句中为及物动词，
+“监控”的意思。
+【译文】不过，谷歌和其他大型技术提供商们严密监控他们的效率，并做了许多改善。
+句
+7
+Monitoring is the first step on the road to reduction, but there is much more to be done, and
+not just by big

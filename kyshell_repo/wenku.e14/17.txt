@@ -1,0 +1,89 @@
+定位到第三段最后一句话
+Thisis apparently the reason MacDonald's restricts
+the availability of its popular McRib
+——
+a marketing trick that has turned the pork sandwich into an object of
+obsession.
+。这句话提到了
+McRib(
+烤汁猪排骨)
+在麦当劳风靡一时，其指示代词“
+this
+”表明了其原因。
+this指代
+前面一句话：“
+luxuries are most…
+sparingly.
+”。从同义替换的角度来看，“
+sparingly”对应D项中的“
+rarity”；“
+most enjoyable
+”对应该选项中的“
+increases pleasure”，因此D
+项为正确答案。
+【干扰排除】第三段最后一句话说“市场营销手段把猪肉三明治变成了让人着魔的一个东西”，但并不能说明
+消费者就不理智，A
+项属于过度推理，故排除。
+文中并没有提到烤汁猪排骨的质量
+(quality)，B
+项属于无中生有，故排除。C
+项属于过度推断。原文第四句破折号之后的内容表明当时麦当劳这一营销手段起作用了，但并不能
+说明所有营销手段都会奏效。且该处为例子本身的信息，并非其证明的信息。
+24.
+根据文章最后一段，《幸福理财》这本书
+______。
+[A]
+给读者留下了很多批评的空间
+[B]
+证明是值得购买的一本书
+[C]
+预言了美国人存在的巨大收入差距
+[D]
+或许能给读者带来一种成就感【答案】B
+【考点】推理题
+【命题思路】这是一道封闭式推理题，需要对最后一段进行锁定，从而得出答案。
+【直击答案】最后一段最后一句
+But most people will come away from this book believing it was money well spent。
+该句指出大多数人认为这本书值得一买。另外，从同义替换的角度看，原文中的“
+well spent
+”正好对应B项中的“
+worthwhile purchase
+”，都是值得一买的意思，故B
+项为正确答案。
+【干扰排除】A项中的
+criticism
+和这本书值得一买不符，故排除。第二句和第三句提到了穷人和富人对幸福的
+感受程度有所不同，重点依然是围绕着本文的话题金钱和幸福，并未涉及C
+项中的收入差距
+(income gap)，推理过度。D
+项的错误在于该书本身没有给读者带来成就感，而是书中提到的怎样花钱才能让人得到持久的满足感。
+25.
+这篇文章主要讨论了如何
+________。
+[A]
+平衡幸福与花钱之间的关系
+[B]
+花大笔的钱赢得彩票
+[C]
+从花钱消费中获得长久的满足感
+[D]
+消费奢侈品时变得更加理智【答案】C
+【考点】主旨题
+【命题思路】这是一道主旨题。这篇文章段落之间并没有明显的转折，考生可以将每段的主题句连在一起进行
+凝练即可得出答案。
+【直击答案】
+本文主要讨论的是
+Happy Money
+这本书中的话题——幸福与金钱。
+第一段通过中彩票事件引出了
+这一话题，接下里的两段作者介绍了怎样花钱消费才能获得最实惠长久的幸福，最后一段重申主题，并指出这
+本书值得一买。因而C
+项“从花钱消费中获得长久的满足感”为正确选项。
+【干扰排除】第一段中孤寡老人中彩票的事件是本文话题的引子，在后文中再未提及，因而B
+项以偏概全。文
+章主要探讨的是花钱消费应该能够带来长久的满足感，并没有涉及平衡两者之间的关系，故A
+项与原文不符。D
+项是第三段的主要内容，不能概括全文，故排除。
+长难句解析
+1. This is now a question for Gloria Mackenzie, an 84yearold widow who recently emerged from her small, tinroofed
+house in Florida to collect the biggest undivided lottery jackpot in history.

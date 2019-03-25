@@ -1,0 +1,171 @@
+中表示“这一计划朝着最终的
+强制推行网络‘驾照’的模式迈出了第一步”
+，符合语意，故为正确答案。
+A
+项
+frequently
+意为
+“频繁地”
+；
+B
+项
+incidentally
+意为
+“顺便地；
+偶然地”
+；
+C
+项
+occasionally
+意为“偶尔地”
+；都不
+能与上述关键词（斜体词）形成逻辑对应。
+18.
+【答案】
+A
+【解析】
+The plan has also been greeted with
+18
+by some computer security experts, who
+worry that...
+：空格中需
+要填名词，
+表示电脑安全专家对这份计划的态度或反应，
+根据下文电脑安全专家之后的定语
+从句
+who worry that...
+已经明确的说明了他们的态度是
+worry
+，表明他们对此计划持怀疑态度，故
+A
+选项
+skepticism
+“怀疑”为正确答案。
+B
+项
+tolerance
+意为“宽容，容忍”
+；
+C
+项
+indifference
+意为“漠不关心，冷漠”
+；
+D
+项
+enthusiasm
+意为“热心，热
+情”
+，明显不能与
+worry
+形成对应逻辑。
+19.
+【答案】
+C
+【解析】
+...who worry that the
+“
+voluntary ecosystem
+”
+envisioned by Mr. Schmidt would still
+leave much of the Internet
+19
+.
+：本空格所在句说明一些电脑安全专家对“
+voluntary ecosystem
+”的担忧
+worry
+，由
+此可知
+that
+引导的宾语从句
+应是消极信息，而“
+voluntary
+ecosystem
+”本来的目的是要网络安全，由此可以推断出电脑
+安全专家的担忧是“
+voluntary
+ecosystem
+”网络仍然不安全，所以空格中需要“不安全，容易被侵害，不可信”等类似含
+义，故
+C
+选项
+vulnerable
+“脆
+弱的，易受攻击的”为正确答案。
+A
+项
+manageable
+“易处理的，
+可做到的”
+和
+B
+项
+defendable
+“可防御的”
+明显是积极词汇，
+与
+worry
+逻辑不一致；
+D
+项
+invisible
+意为“看不见的，无形的”
+，与被修饰单词
+the Internet
+无法形成修饰关系。
+20.
+【答案】
+D
+【解析】
+They argue that all Internet users should be
+20
+to register and identify themselves,
+in the same way that
+drivers must be licensed to drive on public roads
+：
+根据斜体词
+in the same way
+，
+本句把
+users
+和
+drivers
+做了类比，后者
+“必须持有驾照才能在公共道路上驾车”
+，
+故前者
+“登记身份并确认”
+也是
+“必须的”
+，
+D
+选
+项
+forced
+“强迫，强制”与“必
+须”是近义关系，体现出强制性的口吻，故为正确答案。
+A
+项
+invited
+意为“被邀请的”
+；
+B
+项意为“被任命的”
+；
+C
+项
+allowed
+“被允许的”
+；都没
+有体现出于
+must be
+一样的
+强制口吻，逻辑对应性不强。
+三、全文翻译
+互联网允许网络用户匿名登录，
+这对于保护隐私和言论自由来说是一个福音。
+但也正是匿名
+制导致了网络犯罪
+急剧增加，并使之席卷了整个互联网世界。
+在给越来越失去法律控制的互联网世界带来安全和保障的同时，隐私能否得到保护呢？

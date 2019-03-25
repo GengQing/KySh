@@ -1,0 +1,90 @@
+将肥胖依次分级，分析四个选项，A项
+in essence
+“事实上，本质上”，B项
+in contrast
+“相反地”，C项
+in turn
+“依次”，D项
+in part
+“部分地”，C
+项符合题意。
+【命题思路】本题考查对句意的理解，并考查相似介词短语辨析。
+【干扰排除】此处需要一个插入语来顺成上下文的关系，由于下文也没有揭示肥胖构成的事实，所以A项不成
+立。上下文不存在对立关系，所以不能选B项。D
+项不符合语义。
+While such numerical standards seem __9__
+，they are not. Obesity is probably less a matter of weight than body
+fat. Some people with a high BMI are in fact extremely fit, __10__ others with a low BMI may be in poor __11__. For
+example, many collegiate and professional football players __12__ as obese, though their percentage body fat is low.
+Conversely, someone with a small frame may have high body fat but a __13__ BMI.
+【译文】虽然这些数字标准看起来直截了当，实际却不是这样。肥胖相比体重而言，更强调脂肪含量。有些人
+BMI
+值很高，但是身材却相当好，有些人
+BMI
+值虽然低，但是体型却很差。例如，有些职业足球运动员被认
+为很胖，但是身体脂肪量却很低。相反，一些小个头的胖子
+BMI
+值却正常。
+9.
+[A] complicated
+复杂的，难懂的
+[B] conservative保守的
+[C] variable
+可变的，易变的
+[D] straightforward
+简单的，直接的【答案】D
+【考点】词义辨析
+【直击答案】空格所在句意为“相比之下，这样的数字标准看起来
+________
+，实际上不是的”。这里的数字标
+准指肥胖指数，且下文也讲述了
+BMI
+指数的高低并不与身材的好坏成正比，只是这些数字看起来好像能反映与
+身材之间的关系而已。D项
+straightforward
+“直截了当的”，符合题意，因此为正确答案。
+【命题思路】本题考查对上下文语义的理解，并考查形容词辨析。
+【干扰排除】
+肥胖指数分为三类，而且算法比较简单，所以A项
+complicated
+“复杂的”不正确。B项
+conservative
+“保守的”
+，用于描述一种数学公式，不恰当。
+一名患者或一名受试者的
+BMI
+一般是确定的，因此C项
+variable
+“可变的”也不符合题意。
+10.
+[A] so所以
+[B] while然而
+[C] since
+既然，自从
+[D] unless除非【答案】B
+【考点】逻辑关系
+【直击答案】空格所在句意为“一些人有很高的
+BMI
+，实际上身材正好，________
+其他人有较低的
+BMI
+指数，可能
+________
+”。从前半句可看出，有些人的
+BMI
+指数很高，应该属于体重肥胖的人，事实上身材正好，这里
+说明的是反常的现象，后半句是其他人的
+BMI
+指数较低，而
+________
+较差。四个选项中只有
+while
+有转折的含
+义，其他选项均不符合题意，所以正确答案为B项。
+【命题思路】本题考查对上下文语义关系的正确把握。
+【干扰排除】A
+项表示因果关系，C
+项表示原因或让步关系，D
+项表示让步关系，都不能体现上下文之间的对
+立关系，非正确答案。
+11.

@@ -1,0 +1,177 @@
+要填动词的过去分词，
+做中心词
+driver
+’
+s license
+的定语。该过去分词的逻辑主语是
+government
+“政府”
+，逻辑宾
+语是
+driver's license
+“驾驶执
+照”
+，由此推断空格中需要“颁发”之意，故
+B
+选项
+issue
+“出版，发表；颁发，签发”为
+正确答案。
+A
+项
+release
+意为“释放，发行”
+；
+C
+项
+distribute
+意为“分配，分布”
+；
+D
+项
+deliver
+意为
+“递送，交付”
+，明显与空格
+前后的逻辑性不强，故为干扰项。
+11.
+【答案】
+D
+【解析】
+...companies that already have these
+“
+single sign-on
+”
+systems //that make it possible for
+users to
+11
+just
+once but use many different services
+：
+//
+后面是关系代词
+that
+引导的定语从句，
+that
+指代先
+行词
+systems
+，意为“这种
+系统可以使用户„„一次便可以享受多项服务”
+。
+single
+对应
+just once
+，而
+sign-on
+（签约）
+对应空白，根据空格所
+在句子的前半部分“谷歌和微软等公司已经启用了签名系统”可知，
+“签约”在本句是比喻
+用法，指的是用户在注册系
+统中的注册登记，故空白含义需要“登录，注册”等类似含义，所以
+D
+项
+log in
+“登录，
+进入”为正确答案。
+A
+项
+carry on
+意为“从事，忙于；继续进行”
+，与空格后的
+just once
+明显无法搭配；
+B
+项
+linger on
+意为“停留，徘
+徊”
+，与空格后的
+just once
+也明显无法搭配；
+C
+项
+set in
+意为“嵌入，开始，到来”
+，由于
+动作发出者是
+users
+（网络
+用户）
+，
+“网络用户”不会发出“嵌入”这样的动作，故为干扰项。
+12.
+【答案】
+B
+【解析】
+12
+, the approach would create a
+“
+walled garden
+”
+in cyberspace...
+：这种句首
+有空格，其后有逗号的题目，
+通常需要填逻辑性很强的副词或介词短语，
+以承上启下，
+体现上下文的逻辑关系。
+其解题思
+路是比对上下文信息，
+具体到本题目：根据空格后的
+the approach
+（注意定冠词的指示意义）可知上文讲述的是这
+种方式，而
+would create
+a
+“
+walled garden
+”
+in cyberspace
+“这种方法会在网络上建起‘带围墙的花园’
+”
+，表示这种
+方法的实际效果，由此推断空
+格中需要“事实上，其实”等类似含义，故
+B
+选项
+in effect
+“实际上，事实上”为正确答
+案。
+A
+项
+in vain
+意为“徒劳地，无用地”
+，与空格后的
+would create...
+逻辑相反；
+C
+项
+in return
+意为“作为报答；反过来”
+，
+通常指付出与收益的逻辑对应；
+D
+项
+in contrast
+意为“相反，相比之下”
+，体现上下文的对
+比反差关系，此处上下文
+是承接的关系。
+13.
+【答案】
+A
+【解析】
+...with safe
+“
+neighborhoods
+”
+and bright
+“
+streetlights
+”
+to establish a sense of a
+13
+community
+：根据空格
+所在句子的大意是“这种方法会在网络空间中创建一中带有安全‘街区’和明亮‘街灯’的

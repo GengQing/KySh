@@ -1,0 +1,91 @@
+【直击答案】
+根据题干可以定位到最后一段，其中
+touched on this point即为
+Brynjolfsson和
+McAfee的观点。而
+this point
+则回指第五段的内容，起到承上启下的作用。第五段指出需要调整现在的工作模式，需要人们发挥主
+动性和创造性。第六段最后一句再次强调问题的核心是人类要革新工作方式。因此正确答案为选项D，强调人
+类的参与。
+【干扰排除】选项A
+偷换概念，第五段第四句指出机器只能完成“预先设定的
+(predictable)工作
+(activities)
+”，而非“机器行为”的可预测性。选项B中的“
+efficiently
+”在文中并未提及。选项C
+与原文信息相反，第六段
+第三句话指出，我们需要看到机器提高人力而非取代人力
+(rather than replace it)的方面。
+35.
+以下哪项是本文最合适的标题？
+[A]
+如何革新我们的工作方式？
+[B]
+机器将会取代人力
+[C]
+我们能够赢得与机器的竞争吗？
+[D]
+经济下滑激发创新【答案】C
+【考点】主旨题
+【命题思路】这是一道主旨题，考查对文章的归纳总结，且正确选项应具有“宏观覆盖性”。
+【直击答案】综合各段大意可知，本文讨论的核心是“人机相争”这一现象。面对机器对人类岗位的吞噬，作
+者强调要改变我们的工作模式，注重在工作中发挥人的主动性与创造力，使机器帮助人。因此正确答案为选项C。
+【干扰排除】选项A
+出现在最后一段最后一句话。但该句仅指出了解决人机相争问题的方向，而文中并未涉及
+“究竟如何革新工作方式”的内容。文章首段提到了“某些工作被机器所淘汰”，但并不能推出选项B，且该
+选项与全文意思不合。选项D
+只是第一段提到的细节信息，不具有概括性。
+长难句解析
+1. This argument has attracted a lot of attention, via the success of the book Race Against the Machine, by Erik
+Brynjolfsson and Andrew McAfee, who both hail from MIT’s Center for Digital Business.
+【解析】本句的主干是
+This argument has attracted a lot of attention
+。介词短语
+via
+…作方式状语修饰谓语动词；
+接着介词短语
+by
+…作非限制性后置定语，介绍
+the book
+的作者。最后
+who
+引导定语从句，对前面两位作者的
+身份补充说明。
+【译文】来自麻省理工学院数学经济中心的
+Erik Brynjolfsson和
+Andrew McAfee
+合著了《与机器赛跑》一书，通过该书的热卖，上述观点已受到广泛的关注。
+2. Hagel says we have designed jobs in the U.S. that tend to be“
+tightly scripted”
+and“
+highly standardized”
+ones that
+leave no room for“
+individual initiative or creativity”.【解析】
+本句的主干是
+Hagel says
+，says
+后面省略了宾语从句的引导词
+that。
+在宾语从句中嵌套了一个
+that引导
+的定语从句修饰
+jobs
+，而在这个定语从句中又嵌套了一个
+that
+引导的定语从句修饰
+ones
+，ones
+指代前面出现的
+jobs。【译文】
+Hagel
+认为，在美国我们所设计的工作岗位是“严格照本宣科”以及“高度标准化”的，这样的岗位
+并没有给个人的主动性和创新性留有空间。核心词汇
+fragile a.
+脆弱的，易碎的
+boom n.繁荣
+vt.
+使……兴旺
+outmode vt.
+使……过时；淘汰

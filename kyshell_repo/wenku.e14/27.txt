@@ -1,0 +1,86 @@
+减少政府干预的影响
+[C]
+有助于投资新的发展
+[D]
+减少部长们的责任【答案】C
+【考点】推理题
+【命题思路】这是一道封闭式推理题。考生只要对第六段一句话的内容做出正确的理解即可得出答案。
+【直击答案】根据题干回文定位到第六段。第六段的这句话指出，租赁环境的稳定性对注册供应商用税收投资
+新发展项目的能力有很重要的影响。这与C
+项“有助于投资新的发展”意思相符，而且“
+contribute to”与原文中的“
+have a significant impact
+”表达的含义一致，而且都是为了“
+fund new developments”，故C
+项为正确答案。
+【干扰排除】A项“
+cost
+”一词在文中并未提及，故该选项无中生有，是错误选项。B
+项“减少政府干预的影
+响”也未在文中提及，亦属于无中生有。第六段的主要内容集中在领导应该考虑创建更加稳定的租赁环境，进
+一步讲，他们应该承担更多的责任，而并非D
+项所表达的含义减轻了领导的责任，故D
+项与原文意思不符。
+40.作者认为
+2015
+年以后，政府或许会
+______。
+[A]
+实施更多的政策来支持住房建设
+[B]
+重新审视大规模的公共设施投资需求
+[C]
+更新经济适用房建设计划
+[D]
+停止对住房部分的大额资助【答案】D
+【考点】推理题
+【命题思路】这是一道开放式推理题。考生需要将最后一段的主要内容和文章的主旨相结合进行推理。
+【直击答案】根据题干可以回文定位到最后一段。第二句提到用于建设经济适用房项目的资金将于
+2015年到
+期，而且不可能延期。这就意味着政府的投资停止了。D
+项与原文信息相符。
+【干扰排除】
+文中主要提到的是住房建设所遇到的资金问题，并没有提及政策性问题，因而A
+项属于无中生有，故排除。最后一段第四句话提到我们不可能再回到大规模的公共设施投资时代，因此政府未来将不会再重新审
+视大规模的公共设施投资需求，故B
+项与原文意思不符。同理，政府也不会更新经济适用房建设计划，故排除C项。
+长难句解析
+1. Ministers should also look at creating greater certainty in therental environment, which would have a significant
+impact on the ability of registered providers to fund new developments from revenues.
+【解析】这是一个主从复合句，其中
+which
+引导的非限制性定语从句，是对前面整个句子的修饰；从句中用到了短语“
+have impact on sth.
+”含义是对某事有影响；接着
+to fund new
+…是目的状语。
+【译文】领导们同样也应该考虑为租赁环境创造更多的稳定性，这对注册供应商用税收投资新的发展项目的能
+力有很重要的影响。
+2. While these measures would be welcome in the short term, we must face up to the fact that the existing￡
+4.5bn
+program of grants to fund new affordable housing, set to expire in 2015
+，is unlikely to be extended beyond then.
+【解析】这是一个由
+while
+引导的让步状语从句，从句是一个简单句，主句中嵌套了一个由
+that
+引导的同位语
+从句，解释说明
+fact
+；在这个从句中
+existing￡
+4.5bn是
+program
+的前置定语，to fund new affordable housing是
+to do
+不定式作后置定语，set to expire
+是过去分词短语作定语修饰
+program
+，谓语动词是
+is。
+【译文】虽然这些措施在短期内会受到欢迎，但是我们必须面对这样的事实：目前授予投资新的经济适用房建
+设项目的资金是
+45
+亿英镑，到
+2015
+年过期，并且这笔钱不可能延期。
